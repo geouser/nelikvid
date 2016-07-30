@@ -14,6 +14,9 @@
 /*Parts styles*/
 
 @import 'parts/popup';
+@import 'parts/buttons';
+@import 'parts/footer';
+
 
 
 /*=====================================================================================*/
@@ -189,7 +192,7 @@ nav ul {
     height: 100%;
     min-height: 650px;
     max-height: 900px;
-    background: url('../images/law.jpg') no-repeat center center;
+    background: url('') no-repeat center center;
     background-size: cover;
     padding: 200px 0 0 0;
     position: relative;
