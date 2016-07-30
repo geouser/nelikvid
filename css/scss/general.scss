@@ -24,14 +24,78 @@
 
 /*=====================================================================================*/
 /*  HEADER STYLES  */ 
-         
-header {
-    @include position(absolute, 0, auto, auto, 0);
+body {
+    padding-top: 90px; 
+}         
+h1 {
+    font: 50px $hb; 
+    text-transform: uppercase;
+    em {
+        color: $orange;
+        font-size: 55px;  
+        font-style: normal; 
+    }
+    span {
+        font-size: 31px; 
+    }
+    &:after {
+        display: block;
+        width: 96px;
+        content: "" ;
+        height: 3px;
+        background-color: $orange;
+        margin: 34px 0;   
+    }
+}
+h2 {
+    &:after {
+        display: block;
+        width: 96px;
+        content: "" ;
+        height: 3px;
+        background-color: $orange;
+        margin: 34px auto;   
+    }
+}
+.header {
+    @include position(fixed, 0, auto, auto, 0);
     width: 100%;
     z-index: 100;
     background: #fff;
     margin: 0;
+    height: 90px; 
     @include transition(all, .4s);
+    background-image: url("../images/header_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%; 
+    .wrapper {
+         @include flex();
+         height: 100%; 
+    }
+    &__contact {
+       width: 145px; 
+       font-family: $hr;  
+       color: #333; 
+       a {
+         font-size: 16px;
+         display: block;
+         margin-bottom: 10px; 
+         vertical-align: middle;
+         &:before {
+             content: "";
+             display: inline-block;
+             vertical-align: middle;
+             width: 11px;
+             height: 12px;
+             background-image: url("../images/telSign.png");
+             -webkit-background-size: 100% 100%; 
+             -o-background-size: 100% 100%; 
+             background-size: 100% 100%; 
+             margin-bottom: 2px; 
+             margin-right: 4px; 
+         }
+       }
+    }
     
         /*.................media.............*/
         @include m800 {
@@ -51,29 +115,6 @@ header {
             }
         }
         /*.............end media..............*/
-
-
-    .header__top {
-        padding: 7px 0;
-        color: #FFF;
-        .wrapper {
-            @include flex();
-        }
-        .divide {
-            height: 35px;
-            width: 1px;
-            vertical-align: middle;
-            background-color: #1E5D75;
-        }
-    }
-    
-    .header__bottom {
-        padding: 30px 0;
-        background-color: #fff;
-        .wrapper {
-            @include flex();
-        }
-    }
 }
 
 
@@ -111,16 +152,27 @@ header {
 
 /* ------------------------------------ */
 /*  NAV STYLES  */
-
+nav {
+    height: 100%;
+}
 nav ul {
     @include flex();
     list-style-type: none;
+    height: 100%;
+    margin: 0; 
     a {
         display: inline-block;
-        margin: 0 20px;
         text-decoration: none;
+        margin: 0 10px; 
+        font: 13px/90px $hr; 
+        text-transform: uppercase;
+        color: #333; 
+        border-bottom: 3px solid transparent;
+        height: 100%;
         @include transition(all, .2s);             
-        &:hover {}
+        &:hover {
+            border-bottom: 3px solid $orange;
+        }
     }
 
         /*.................media.............*/
@@ -192,21 +244,67 @@ nav ul {
 
 
 .offer {
-    height: 100%;
-    min-height: 650px;
-    max-height: 900px;
-    background: url('') no-repeat center center;
+    height: 550px;
+    background: url('../images/offerBg.jpg') no-repeat center center;
     background-size: cover;
-    padding: 200px 0 0 0;
     position: relative;
-
-
-    .offerInfo {
+    
+    .wrapper {
         height: 100%;
-        @include flex($alignI: center, $justify: space-around, $direction: column);
-        z-index: 2;
-        position: relative;
-        text-align: center;
+        text-align: justify;
+        @include flex();
     }
 
+    .offerInfo {
+        display: inline-block;
+        vertical-align: middle;
+        width: 510px;
+        text-align: left;
+        color: #FFF; 
+        ul {
+            list-style-type: none;
+            li {
+                margin-bottom: 30px;
+                font: 20px/31px $hl;  
+                padding-left: 60px; 
+            }
+        }
+    }
+
+    form {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+}
+
+form {
+    width: 320px;
+    background-color: #FFF; 
+    text-align: center; 
+    .wrapFields {
+        padding: 35px 40px;
+    }
+    p {
+        background-color: $orange;
+        color: #FFF; 
+        font-size: 18px; 
+        padding: 35px 40px;
+        span {
+            color: #333;
+            font-size: 22px; 
+        }   
+    }
+    .inputWrap {
+        width: 100%; 
+    }
+    input {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #333;
+        margin-bottom: 30px;
+        padding: 10px 30px;     
+        font: 16px $hl;
+        color: #333;  
+    }
 }

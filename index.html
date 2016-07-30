@@ -23,23 +23,25 @@
 
         <!--=================================================================================================-->
                                                     <!-- HEADER -->
-        <header>
+        <header class="header">
             <div class="wrapper">
-                <div class="logo">
-                    <span>Logo</span>
-                    <a href=""></a>
-                </div>
+                <a href="" class="logo">
+                    <img src="images/logo.png" alt="">
+                </a>
                 <nav><!-- start nav -->
                     <ul>
-                        <li><a href="#" class="active">Главная</a></li>
-                        <li><a href="#">Портфолио</a></li>
-                        <li><a href="#">Разработка</a></li>
-                        <li><a href="#">Продвижение</a></li>
-                        <li><a href="#">О компании</a></li>
+                        <li><a href="#" class="active">О компании</a></li>
+                        <li><a href="#">Наши услуги</a></li>
+                        <li><a href="#">Схема работы</a></li>
+                        <li><a href="#">Отзывы</a></li>
                         <li><a href="#">Контакты</a></li>
                     </ul>
                 </nav><!-- end nav -->
-                <button class="button button--small">Заказать звонок</button>
+                <div class="header__contact">
+                    <a href="tel:8 (499) 391-13-85" class="header__contact__tel">8 (499) 391-13-85</a>
+                    <button class="button button--small">Заказать звонок</button>
+                </div>
+                
             </div><!-- end wrapper -->
         </header><!-- end header -->
         
@@ -53,11 +55,87 @@
         <!--=================================================================================================-->
                                                     <!-- OFFER SECTION -->
         <section class="offer">
-            <div class="offerInfo wrapper"><!-- start offerInfo -->
-                <h1>We offer you to meet people whose ideas and views would be interesting for you! <br> Listen, discuss, learn.</h1>
-                <button class="button"><span>Заказать</span></button>
+            <div class="wrapper"><!-- start offerInfo -->
+                <div class="offerInfo">
+                    <h1>Выкупаем новые <em>неликвидные</em> <span>автозапчасти за наличные</span></h1>
+                    <ul>
+                        <li>Выкупаем даже минимальные </li>
+                        <li>Не забираем ваш неликвид к себе на склад, для  дальнейшей его реализации!</li>
+                    </ul>
+                </div>
+                <form action="">
+                    <p><span>Оставьте вашу заявку</span> и начните работать с нами!</p>
+                    <div class="wrapFields"> 
+                        <span class="inputWrap inputWrap--person">
+                            <input type="text" placeholder="Введите ваше имя" name="name">
+                        </span>
+                         <span class="inputWrap inputWrap--tel">
+                            <input type="text" placeholder="Введите ваш телефон" name="tel">
+                        </span>
+                        <button class="button">Оставить заявку</button>
+                    </div>
+                </form>
             </div><!-- end offerInfo -->
         </section><!-- end offer section --> 
+
+        
+         <!--=================================================================================================-->
+                                                    <!-- ABOUT SECTION -->
+        <section class="about">
+            <div class="wrapper">
+                
+                <div class="notDo">
+                    <div class="notDo__item">
+                        <i></i>
+                        <p><span>Нет</span>б/у запчастям</p>
+                    </div>
+                    <div class="notDo__item">
+                        <i></i>
+                        <p><span>Нет</span>кузовным запчастям</p>
+                    </div>
+                    <div class="notDo__item">
+                        <i></i>
+                        <p><span>Нет</span>запчастям к китайским авто</p>
+                    </div>
+                    <div class="notDo__item">
+                        <i></i>
+                        <p><span>Нет</span>отечственному автопрому <small>(уважаем но не выкупаем и нереализуем)</small></p>
+                    </div>
+                </div><!-- ebd not do -->
+
+                <h2>О компании</h2>
+
+            </div><!-- end wrapper -->
+
+            <div class="mapBlock">
+                <div class="wrapper">
+                    <div class="mapBlock__scale">
+                        <p class="mapBlock__scale__info">Мы работаем срегионами<span>центральной россии</span></p>
+                        <img src="images/mapScale.png" alt="">
+                    </div>
+                    <div class="mapBlock__info">
+                        <p>Наша компания занимается выкупом и реализацией новых неликвидных запчастей.</p>
+
+                        <div class="info__nubers">
+                            <div class="info__nubers__num">647</div>
+                            <div class="info__nubers__des">
+                                <h4>Довольных клиентов </h4>
+                                <p>Автосервисов, техцентров, магазинов автозапчастей</p>
+                            </div>
+                        </div>
+
+                        <div class="info__nubers">
+                            <div class="info__nubers__num">18</div>
+                            <div class="info__nubers__des">
+                                <h4>Торговых партнеров</h4>
+                                <p>В том числе крупных интернет-площадок Москвы и Московской области</p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- end wrapper -->
+            </div><!-- end mapBlock -->
+
+        </section>
 
   	    <!-- //////////////////////////////////////////////////////////////////////// -->
 
