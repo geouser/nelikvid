@@ -1,7 +1,7 @@
 .reviews__slider {
 	padding-top: 55px;
 	padding-bottom: 82px;
-	margin-bottom: 100px;
+	margin-bottom: 105px;
 	border-bottom: 1px solid #EAEAEA;
 
 	.image {
@@ -96,5 +96,59 @@
 		}
 
 
+	}
+}
+
+
+.questions {
+	padding-bottom: 45px;
+	position: relative;
+
+	.q_left {
+		position: absolute;
+		bottom: 0;
+		z-index: -1;
+		left: -237px;
+	}
+	.q_right {
+		position: absolute;
+		bottom: 0;
+		z-index: -1;
+		right: -200px;
+	}
+	.q_girl {
+		position: absolute;
+		bottom: 0;
+		z-index: 2;
+		left: 30px;
+	}
+
+	.order-box {
+		width: 620px;
+		margin: 0 auto;
+		border: 1px solid #EBEBEB;
+		padding: 44px 65px;
+		background-color: rgba(255, 255, 255, .8);
+  		box-shadow: 6.576px 13.482px 49px 5px rgba( 0, 0, 0, 0.1);
+
+  		.title {
+  			color: $orange;
+  			font-size: 35px;
+  			font-family: $hb;
+  			text-transform: uppercase;
+  			margin-bottom: 16px;
+  		}
+
+  		p {
+  			font-size: 20px;
+  			color: #000;
+  			margin-bottom: 22px;
+
+  			span {
+  				font-family: $hb;
+  				font-size: 24px;
+  				color: $grey;
+  			}
+  		}
 	}
 }
