@@ -10,12 +10,26 @@
 		display: inline-block;
 		vertical-align: middle;
 
+		@media ($tablets) {
+			width: 100%;
+
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+
 		&:first-child {
 			text-align: left;
+			@media ($tablets) {
+				text-align: center;
+			}
 		}
 
 		&:last-child {
 			text-align: right;
+			@media ($tablets) {
+				text-align: center;
+			}
 		}
 	}
 

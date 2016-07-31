@@ -7,6 +7,15 @@
 	@extend %vertAlign;
 	text-align: center;
 
+	@media ($tablets) {
+		height: auto;
+		padding-bottom: 200px;
+
+		&:before {
+			display: none;
+		}
+	}
+
 	h2 {
 		margin-bottom: 30px;
 		padding-top: 0;
@@ -19,6 +28,11 @@
 		top: 0;
 		left: 0;
 		z-index: 1;
+
+		@media ($tablets) {
+			bottom: 0;
+			top: 0;
+		}
 	}
 
 	&:after {
@@ -32,6 +46,10 @@
 		background-color: #191919;
 		opacity: .8;
 		transform: skewX(-14deg);
+
+		@media ($tablets) {
+			display: none;
+		}
 	}
 
 	.wrapper {
@@ -42,12 +60,23 @@
 		padding-left: 640px;
 		padding-right: 0;
 		text-align: left;
+
+		@media ($tablets) {
+			background-color: rgba(25, 25, 25, .8);
+			padding: 40px 20px;
+			text-align: center;
+		}
 	}
 
 	ul {
 		color: #fff;
 		font-size: 16px;
 		margin: 0;
+
+		@media ($tablets) {
+			display: inline-block;
+			text-align: left;
+		}
 
 		li {
 			list-style: none;

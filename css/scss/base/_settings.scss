@@ -12,7 +12,8 @@ $hl:							'HelveticaNeueCyr Light';
 
 // RESPONSIVE
 // ---------------------------
-
+$tablets:						'max-width: 1000px';
+$phones:						'max-width: 750px';
 
 
 // TYPOGRAPHIC
@@ -32,6 +33,10 @@ h2 {
 	color: #333;
 	text-transform: uppercase;
 	padding-top: 65px;
+
+	@media ($phones) {
+		font-size: 28px;
+	}
 }
 .white {
 	color: #FFF;
@@ -47,4 +52,9 @@ h2 {
 	padding: 0 20px;
 	margin: 0 auto;
     text-align: center;
+
+    @media ($tablets) {
+    	width: 100%;
+    	padding: 0 20px;
+    }
 }
