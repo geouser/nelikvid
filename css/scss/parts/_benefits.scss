@@ -1,0 +1,35 @@
+.benefits {
+	&-box {
+		@extend %clearfix;
+		padding: 45px 0 40px;
+	}
+
+	&__item {
+		width: 33.3333%;
+		float: left;
+		padding: 0 35px;
+		height: 162px;
+
+		&:not(:last-child) {
+			border-right: 1px solid #F1F1F1;
+		}
+
+		.image {
+			height: 80px;
+			text-align: center;
+			margin-bottom: 30px;
+
+			img {
+				height: 100%;
+			}
+		}
+	}
+
+	.garanty {
+		font-size: 20px;
+		color: #bd0e0e;
+		text-transform: uppercase;
+		font-family: $hb;
+		padding-bottom: 65px;
+	}
+}
