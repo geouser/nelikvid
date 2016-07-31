@@ -326,6 +326,7 @@ form {
         width: 100%; 
         .wrapFields {
             width: 100%; 
+            padding: 24px 38px; 
             .inputWrap {
                 display: inline-block;
                 width: 268px;
@@ -569,7 +570,7 @@ form {
 .autoParts {
     background: url('../images/autoPartsBg.jpg') no-repeat center center;
     background-size: cover;
-    padding: 70px 0; 
+    padding: 0px 0 70px; 
     &__infoBlocks {
         @include flex($alignI: flex-start);
         &__item {
