@@ -46,16 +46,18 @@ h1 {
         margin: 34px 0;   
     }
 }
-h2 {
-    &:after {
-        display: block;
-        width: 96px;
-        content: "" ;
-        height: 3px;
-        background-color: $orange;
-        margin: 34px auto;   
-    }
+.subtitle {
+    margin: 40px auto;
+    font-size: 20px; 
+    color: #FFF; 
+    span {
+        color: $orange; 
+    } 
 }
+.white {
+    color: #FFF 
+}
+
 .header {
     @include position(fixed, 0, auto, auto, 0);
     width: 100%;
@@ -281,6 +283,8 @@ form {
     width: 320px;
     background-color: #FFF; 
     text-align: center; 
+    -webkit-border-radius: 4px; 
+    border-radius: 4px; 
     .wrapFields {
         padding: 35px 40px;
     }
@@ -296,6 +300,16 @@ form {
     }
     .inputWrap {
         width: 100%; 
+        background: url('../images/icon_person.png') no-repeat 2% 50%;
+        -webkit-background-size: 10px 12px; 
+        -o-background-size: 10px 12px; 
+        background-size: 10px 12px; 
+        &--tel {
+            background: url('../images/icon_tel.png') no-repeat 2% 50%;
+            -webkit-background-size: 12px 12px; 
+            -o-background-size: 12px 12px; 
+            background-size: 12px 12px; 
+        }
     }
     input {
         width: 100%;
@@ -305,5 +319,308 @@ form {
         padding: 10px 30px;     
         font: 16px $hl;
         color: #333;  
+        background: transparent; 
+    }
+    &.horizontal {
+        width: 100%; 
+        .wrapFields {
+            width: 100%; 
+            .inputWrap {
+                display: inline-block;
+                width: 268px;
+                margin-right: 35px;
+                margin-bottom: 0;  
+                input {
+                    margin-bottom: 0; 
+                } 
+            }
+        }
+    }
+}
+
+
+.about {
+    h2 {
+        margin: 0px auto 60px; 
+        padding: 0; 
+        position: relative;
+        &:after {
+            display: block;
+            width: 34px;
+            content: "" ;
+            height: 3px;
+            background-color: $orange;
+            margin: 34px auto;   
+        }
+    } 
+}
+
+.notDo {
+    position: relative;
+    overflow: hidden;
+    .wrapper {
+         @include flex();
+        height: 180px;
+    }
+    &__item {
+        i {
+            margin-right: 16px;
+            display: inline-block;
+            vertical-align: middle; 
+            background-image: url("../images/icons_not.png");
+            background-repeat: no-repeat;
+            width: 55px;
+            height: 55px;
+        }
+        &:first-of-type {
+            i {
+                background-position: -4px -143px; width: 51px; height: 52px;
+            }
+        }
+        &:nth-of-type(2) {
+             i {
+                    background-position: -4px -88px;  width: 65px; height: 52px;
+            }
+        }
+         &:nth-of-type(3) {
+             i {
+                background-position: -4px -0px; width: 66px; height: 34px;
+            }
+        }
+         &:last-of-type {
+             i {
+                background-position: -4px -38px; width: 65px; height: 46px;
+            }
+        }
+        p {
+            min-height: 88px;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: left;
+            width: 100px; 
+            font-size: 15px; 
+            span {
+                font: 35px $hb; 
+                text-align: left;
+                display: block;
+                margin-bottom: 16px; 
+            }
+            small {
+                font: 14px $hl; 
+                text-align: left;
+            }
+
+        }
+        &:nth-of-type(2) {
+            p {
+                width: 75px 
+            }
+        }
+         &:nth-of-type(3) {
+           p {
+                width: 115px 
+            }
+        }
+         &:last-of-type {
+            p {
+                width: 195px;
+            }
+        }
+    }
+    &:before {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 60%;
+        left: -10%;
+        position: absolute;
+        left: -24%;
+        transform: skewX(32deg);
+        top: 0;
+        background-color: #f1f1f1;     
+        z-index: -1; 
+    }
+}
+
+.mapBlock {
+    position: relative;
+    display: block;
+    padding-top: 60px; 
+    padding-bottom: 80px; 
+    .mapImg {
+        position: absolute;
+        top: 195px;
+        left: 51.2%;
+    }
+    &__scale {
+        display: block;
+        width: 300px;
+        overflow: visible;
+        position: relative;
+        z-index: 2; 
+        p {
+            font-size: 24px;
+            span {
+                font-family: $hb;
+                text-transform: uppercase;
+                color: $orange;
+                display: block; 
+                margin-top: 5px; 
+            }
+        }
+        img {
+            position: absolute;
+            right: -276px;
+            top: 16px;
+        }
+        &:after {
+            display: block;
+            content: '';
+            width: 100px;
+            height: 80px;
+            position: absolute;
+            top: 95px;
+            left: 136px;
+            background-image: url("../images/mapArrow.png");
+            -webkit-background-size: 100% 100%; 
+              -o-background-size: 100% 100%; 
+              background-size: 100% 100%;   
+        }
+    }
+    &__info {
+        margin-top: 250px; 
+        p {
+            font: 24px $hl; 
+            text-align: left;
+        }
+    }
+    &:after {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 70%;
+        position: absolute;
+        right: -21.6%;
+        transform: skewX(32deg);
+        top: 0;
+        background-color: #f1f1f1;     
+        z-index: -1; 
+    }
+}
+
+.info__nubers {
+    width: 430px;
+    text-align: left; 
+    margin-top: 40px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;  
+    &:last-of-type {
+        margin-right: 0; 
+    }
+    &__num {
+        position: relative;
+        font: 70px $hb; 
+        padding: 8px 0;
+        text-align: right;
+        width: 170px;  
+        margin-right: 12px; 
+        display: block; 
+         display: inline-block;
+        vertical-align: middle;
+        &:after {
+            content: "";
+            display: block;
+            width: 120px;
+            height: 100%;
+            border: 3px solid $orange;
+            position: absolute;
+            right: 25px;
+            top: 0;   
+            -webkit-transform: skewX(25deg); 
+             -moz-transform: skewX(25deg); 
+             -ms-transform: skewX(25deg); 
+             -o-transform: skewX(25deg); 
+             transform: skewX(25deg);  
+        }
+        span {
+            display: inline-block;
+            background-color: #FFF; 
+            position: relative;
+            z-index: 2; 
+        }
+    }
+    &__des {
+         display: inline-block;
+        vertical-align: middle;
+        width: 225px; 
+        padding-right: 12px;
+        h4 {
+            font: 20px $hb; 
+        }
+        p {
+            font: 16px $hl; 
+        }
+    }
+}
+
+
+.autoParts {
+    background: url('../images/autoPartsBg.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 70px 0; 
+    &__infoBlocks {
+        @include flex($alignI: flex-start);
+        &__item {
+            &__img {
+                position: relative;
+                width: 120px;
+                height: 105px;  
+                display: block;
+                margin: 0 auto 17px; 
+                text-align: center;
+                &:before {
+                    content: "";
+                    height: 100%;
+                    margin-right: -3px;   
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                img {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin: 0 auto;
+                    width: 48px;  
+                }
+                &:after {
+                    content: "";
+                    display: block;
+                    width: 120px;
+                    height: 100%;
+                    border: 3px solid $orange;
+                    position: absolute;
+                    right: 0px;
+                    top: 0;   
+                    -webkit-transform: skewX(25deg); 
+                     -moz-transform: skewX(25deg); 
+                     -ms-transform: skewX(25deg); 
+                     -o-transform: skewX(25deg); 
+                     transform: skewX(25deg);  
+                }
+            }
+            &:nth-of-type(3n + 2) {
+                margin: 0 40px 40px; 
+            }
+             p {
+                font: 18px $hl;
+                color: #FFF;  
+                padding:  0 10px; 
+            }
+        }
+    }
+    .wrapper > p {
+        font-size: 18px;
+        color: #FFF;
+        margin-bottom: 45px; 
     }
 }
