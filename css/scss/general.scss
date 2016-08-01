@@ -30,7 +30,7 @@ body {
     @include m1000 {
         padding-top: 0; 
     }
-}         
+}  
 h1 {
     font: 50px $hb; 
     text-transform: uppercase;
@@ -846,3 +846,8 @@ form {
         margin-bottom: 45px; 
     }
 }
+
+.vis {
+    visibility: visible !important;
+}       
+
