@@ -1,14 +1,16 @@
 .benefits {
 	&-box {
-		@extend %clearfix;
+		@include flex($wrap: wrap, $alignI: strech);
 		padding: 45px 0 40px;
+
+		@media ($phones) {
+			display: block;
+		}
 	}
 
 	&__item {
 		width: 33.3333%;
-		float: left;
 		padding: 0 35px;
-		height: 162px;
 
 		@media ($tablets) {
 			height: auto;
@@ -30,7 +32,7 @@
 		&:not(:last-child) {
 			border-right: 1px solid #F1F1F1;
 
-			@media ($tablets) {
+			@media ($phones) {
 				border-right: 0;
 			}
 		}
