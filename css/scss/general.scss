@@ -336,6 +336,34 @@ nav ul {
                 margin-bottom: 30px;
                 font: 20px/31px $hl;  
                 padding-left: 60px; 
+                position: relative;
+                &:after {
+                    content: "";
+                    display: block;
+                    width: 28px;
+                    height: 30px; 
+                    position: absolute;
+                    left: 0;
+                    top: 6px;
+                    background-repeat: no-repeat;
+                    -webkit-background-size: 100% auto; 
+                      -o-background-size: 100% auto; 
+                      background-size: 100% auto;   
+                }
+                &:first-of-type {
+                    &:after {
+                        background-image: url("../images/li_1.png")
+                    }
+                }
+                &:nth-of-type(2) {
+                    &:after {
+                        background-image: url("../images/li_2.png")
+                    }
+                }
+                @include m600 { 
+                    padding-left: 40px;
+                    font: 18px/24px $hl;  
+                }
             }
         }
          /*.................media.............*/
