@@ -50,6 +50,45 @@ h1 {
         background-color: $orange;
         margin: 34px 0;   
     }
+    @include m800 {
+       font-size: 46px; 
+       em {
+            font-size: 52px;
+        }
+        span {
+            font-size: 28px;
+        } 
+    }
+    @include m600 {
+       font-size: 40px; 
+       em {
+            font-size: 46px;
+        }
+        span {
+            font-size: 24px;
+        }  
+    }
+    @include m400 {
+       font-size: 36px; 
+       &:after {
+           margin: 20px 0; 
+       }
+       em {
+            font-size: 40px;
+        }
+        span {
+            font-size: 20px;
+        }  
+    }
+    @include m360 {
+       font-size: 28px; 
+       em {
+            font-size: 32px;
+        }
+        span {
+            font-size: 20px;
+        }  
+    }
 }
 .subtitle {
     margin: 40px auto;
@@ -268,10 +307,21 @@ nav ul {
     background-size: cover;
     position: relative;
     
+     /*.................media.............*/
+    @include m1000 {
+        height: auto;
+        padding: 40px 0; 
+    }
+    
     .wrapper {
         height: 100%;
         text-align: justify;
         @include flex();
+         /*.................media.............*/
+        @include m1000 {
+            display: block;
+            text-align: center;
+        }
     }
 
     .offerInfo {
@@ -288,11 +338,22 @@ nav ul {
                 padding-left: 60px; 
             }
         }
+         /*.................media.............*/
+            @include m1000 {
+               margin-bottom: 40px 
+            }
+            @include m600 {
+               width: 100%;  
+            }
     }
 
     form {
         display: inline-block;
         vertical-align: middle;
+        @include m1000 {
+           display: block;
+           margin: 20px auto;  
+        }
     }
 
 }
@@ -303,6 +364,12 @@ form {
     text-align: center; 
     -webkit-border-radius: 4px; 
     border-radius: 4px; 
+    @include m360 {
+       width: 100%;  
+       .button {
+        width: 100%; 
+       } 
+    }
     .wrapFields {
         padding: 35px 40px;
     }
@@ -315,6 +382,12 @@ form {
             color: #333;
             font-size: 22px; 
         }   
+        @include m360 {
+             padding: 35px 20px;
+            span {
+                display: block
+            }
+        }
     }
     .inputWrap {
         width: 100%; 
@@ -338,6 +411,9 @@ form {
         font: 16px $hl;
         color: #333;  
         background: transparent; 
+        @include m360 {
+            font-size: 14px; 
+        }
     }
     &.horizontal {
         width: 100%; 
@@ -377,9 +453,15 @@ form {
 .notDo {
     position: relative;
     overflow: hidden;
+    overflow: hidden;
     .wrapper {
-         @include flex();
+        @include flex($wrap: wrap );
         height: 180px;
+        @include m1000 {
+            height: auto;
+            -webkit-justify-content: center; 
+            justify-content: center;
+        }
     }
     &__item {
         i {
@@ -390,6 +472,9 @@ form {
             background-repeat: no-repeat;
             width: 55px;
             height: 55px;
+            @include m600 {
+                min-width: 64px;
+            }
         }
         &:first-of-type {
             i {
@@ -445,19 +530,28 @@ form {
                 width: 195px;
             }
         }
+        @include m1000 {
+            margin: 20px;
+            text-align: left;
+        }
+        @include m600 {
+            width: 100%;        
+        }
     }
     &:before {
         content: "";
         display: block;
         height: 100%;
-        width: 60%;
-        left: -10%;
+        width: 70%;
         position: absolute;
-        left: -24%;
+        left: -34%;
         transform: skewX(32deg);
         top: 0;
         background-color: #f1f1f1;     
         z-index: -1; 
+        @include m600 {
+            display: none
+        }
     }
 }
 
@@ -466,6 +560,7 @@ form {
     display: block;
     padding-top: 60px; 
     padding-bottom: 80px; 
+    overflow: hidden;
     .mapImg {
         position: absolute;
         top: 195px;
@@ -503,7 +598,7 @@ form {
             background-image: url("../images/mapArrow.png");
             -webkit-background-size: 100% 100%; 
               -o-background-size: 100% 100%; 
-              background-size: 100% 100%;   
+              background-size: 100% 100%
         }
     }
     &__info {
@@ -524,6 +619,10 @@ form {
         top: 0;
         background-color: #f1f1f1;     
         z-index: -1; 
+        @include m1000 {
+            display: none;
+        }   
+
     }
 }
 
