@@ -1,6 +1,6 @@
 .services .wrapper{
 	@extend %clearfix;
-	padding: 70px 0 0 ;
+	padding: 70px 20px 0 ;
 }
 
 .services__item {
@@ -13,13 +13,33 @@
 	background-color: #fff;
 	@include transition(all, 0.2s);
 
+	@media ($tablets) {
+		display: block;
+		margin: 0 auto;
+		float: none;
+		box-shadow: 6.576px 13.482px 49px 5px rgba( 0, 0, 0, .13);
+		z-index: 1;
+		border-color: #fff;
+
+		@media (max-width: 500px) {
+			width: 100%;
+			padding-right: 18px;
+			padding-left: 18px;
+		}
+	}
+
 	&:not(:last-child) {
 		margin-right: 20px;
+		@media ($tablets) {
+			margin-right: auto;
+			margin-bottom: 70px;
+		}
 	}
 
 	&:hover {
 		box-shadow: 6.576px 13.482px 49px 5px rgba( 0, 0, 0, .13);
 		z-index: 1;
+		border-color: #fff;
 	}
 
 	.title {

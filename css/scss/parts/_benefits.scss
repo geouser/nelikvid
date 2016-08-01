@@ -10,8 +10,29 @@
 		padding: 0 35px;
 		height: 162px;
 
+		@media ($tablets) {
+			height: auto;
+		}
+
+		@media ($phones) {
+			width: 280px;
+			display: block;
+			margin: 0 auto 60px;
+			float: none;
+			padding: 25px 10px;
+			box-shadow: 6.576px 13.482px 49px 5px rgba(0, 0, 0, 0.13);
+
+			&:last-child {
+				margin-bottom: 20px;
+			}
+		}
+
 		&:not(:last-child) {
 			border-right: 1px solid #F1F1F1;
+
+			@media ($tablets) {
+				border-right: 0;
+			}
 		}
 
 		.image {
@@ -21,6 +42,12 @@
 
 			img {
 				height: 100%;
+			}
+		}
+
+		.text {
+			@media ($phones) {
+				font-size: 18px;
 			}
 		}
 	}
