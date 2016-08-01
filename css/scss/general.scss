@@ -428,6 +428,14 @@ form {
                 input {
                     margin-bottom: 0; 
                 } 
+                 @include m1000 {
+                     width: 70%;
+                     display: block;
+                     margin: 20px auto;  
+                 }
+                  @include m500 {
+                     width: 100%;
+                 }
             }
         }
     }
@@ -454,6 +462,12 @@ form {
             height: 3px;
             background-color: $orange;
             margin: 34px auto;   
+        }
+        @include m600 {
+           margin-bottom: 0; 
+           &:after {
+               margin: 20px auto; 
+           }
         }
     } 
 }
@@ -543,7 +557,10 @@ form {
             text-align: left;
         }
         @include m600 {
-            width: 100%;        
+            width: 100%;  
+            p {
+                width: 150px !important ;
+            }      
         }
     }
 }
@@ -562,6 +579,10 @@ form {
             margin-left: 280px;
             position: static
         }
+        @include m600 {
+            margin-left: 123px ;
+            margin-top: -40px;
+        }
     }
     &__scale {
         display: block;
@@ -579,6 +600,12 @@ form {
                 margin-top: 5px; 
             }
         }
+        @include m500 {
+            width: 100%; 
+            p {
+                font-size: 20px; 
+            } 
+        }
         img {
             position: absolute;
             right: -276px;
@@ -586,6 +613,11 @@ form {
             @include m1000 {
                 right: -76px;
                 top: -340px;
+            }
+            @include m600 {
+                right: 95px;
+                top: -278px;
+                width: 180px;
             }
         }
         &:after {
@@ -767,6 +799,14 @@ form {
                 color: #FFF;  
                 padding:  0 10px; 
             }
+             @include m1000 {
+                width: 300px; 
+                 margin: 0 0 40px !important; 
+             }
+        }
+        @include m1000 {
+             -webkit-justify-content: center; 
+                justify-content: center; 
         }
     }
     .wrapper > p {
