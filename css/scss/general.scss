@@ -781,7 +781,7 @@ form {
     background-size: cover;
     padding: 0px 0 70px; 
     &__infoBlocks {
-        @include flex($alignI: flex-start, $wrap: wrap);
+        @include flex($alignI: flex-start);
         &__item {
             &__img {
                 position: relative;
@@ -829,6 +829,9 @@ form {
             }
              @include m1000 {
                 width: 300px; 
+                -webkit-flex-wrap: wrap; 
+                -ms-flex-wrap: wrap; 
+                flex-wrap: wrap; 
                  margin: 0 0 40px !important; 
              }
         }
