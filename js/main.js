@@ -10,6 +10,14 @@ window.params = {
 
 jQuery(document).ready(function($) {
 
+    var wow = new WOW(
+      {
+        offset:       300,          // distance to the element when triggering the animation (default is 0)
+        mobile:       true
+      }
+    );
+    wow.init();
+
     /*---------------------------
                                   ADD CLASS ON SCROLL
     ---------------------------*/
@@ -24,6 +32,10 @@ jQuery(document).ready(function($) {
             $element2.toggleClass(className, $document.scrollTop() >= 1);
         });
     });
+
+
+
+    
       
 
     /*---------------------------
