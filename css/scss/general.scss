@@ -435,6 +435,14 @@ form {
 
 
 .about {
+    @media (min-width: 1000px) {
+        background-image: url("../images/aboutBg.jpg");   
+    }
+    @include m1600 {
+        background-position: 40% 0; 
+    }
+    background-repeat: no-repeat;
+    background-position: 0% 0%; 
     h2 {
         margin: 0px auto 60px; 
         padding: 0; 
@@ -538,21 +546,6 @@ form {
             width: 100%;        
         }
     }
-    &:before {
-        content: "";
-        display: block;
-        height: 100%;
-        width: 70%;
-        position: absolute;
-        left: -34%;
-        transform: skewX(32deg);
-        top: 0;
-        background-color: #f1f1f1;     
-        z-index: -1; 
-        @include m600 {
-            display: none
-        }
-    }
 }
 
 .mapBlock {
@@ -565,6 +558,10 @@ form {
         position: absolute;
         top: 195px;
         left: 51.2%;
+        @include m1000 {
+            margin-right: -60%;
+            position: static
+        }
     }
     &__scale {
         display: block;
@@ -586,6 +583,10 @@ form {
             position: absolute;
             right: -276px;
             top: 16px;
+            @include m1000 {
+                right: -76px;
+                top: -340px;
+            }
         }
         &:after {
             display: block;
@@ -596,9 +597,18 @@ form {
             top: 95px;
             left: 136px;
             background-image: url("../images/mapArrow.png");
-            -webkit-background-size: 100% 100%; 
-              -o-background-size: 100% 100%; 
-              background-size: 100% 100%
+            -webkit-background-size: 100% 100%; ;
+            -o-background-size: 100% 100%; ;
+            background-size: 100% 100%;
+            @include m1000 {
+               top: -124px;
+                left: 17px;
+                -moz-transform: scale(1, -1) rotate(35deg);
+                -webkit-transform: scale(1, -1) rotate(35deg);
+                -o-transform: scale(1, -1) rotate(35deg);
+                -ms-transform: scale(1, -1) rotate(35deg);
+                transform: scale(1, -1) rotate(35deg);
+            }
         }
     }
     &__info {
@@ -607,23 +617,17 @@ form {
             font: 24px $hl; 
             text-align: left;
         }
-    }
-    &:after {
-        content: "";
-        display: block;
-        height: 100%;
-        width: 70%;
-        position: absolute;
-        right: -21.6%;
-        transform: skewX(32deg);
-        top: 0;
-        background-color: #f1f1f1;     
-        z-index: -1; 
         @include m1000 {
-            display: none;
-        }   
-
+            margin-top: 60px 
+        }
+        @include m500 {
+           p {
+               font-size: 20px; 
+               text-align: center;
+           }
+        }
     }
+
 }
 
 .info__nubers {
@@ -632,7 +636,11 @@ form {
     margin-top: 40px;
     display: inline-block;
     vertical-align: top;
-    margin-right: 5px;  
+    margin-right: 5px; 
+    @include m600 {
+        width: 100%;
+        margin-right: 0;  
+    } 
     &:last-of-type {
         margin-right: 0; 
     }
@@ -668,6 +676,16 @@ form {
             z-index: 2; 
             border-radius: 20px;
         }
+        @include m600 {
+            font-size: 50px;
+            margin: 10px auto; 
+            display: block; 
+            width: 140px; 
+            &:after {
+                width: 90px;
+                height: 70px;
+            }
+        } 
     }
     &__des {
          display: inline-block;
@@ -681,6 +699,13 @@ form {
         }
         p {
             font: 16px/21px $hl; 
+        }
+        @include m600 {
+            width: 100%;
+            text-align: center;
+            p {
+                text-align: center;
+            } 
         }
     }
     &:nth-of-type(2) {
@@ -696,7 +721,7 @@ form {
     background-size: cover;
     padding: 0px 0 70px; 
     &__infoBlocks {
-        @include flex($alignI: flex-start);
+        @include flex($alignI: flex-start, $wrap: wrap);
         &__item {
             &__img {
                 position: relative;
