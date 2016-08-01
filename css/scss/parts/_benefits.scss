@@ -1,4 +1,32 @@
 .benefits {
+	position: relative;
+
+	&:after {
+		content:'';
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0.75;
+		z-index: 1;
+		display: none;
+		@media (max-width: 1600px) {
+			display: block;
+		}
+	}
+	@media (min-width: 1001px) {
+		background-image: url(../images/benefits_bg.png);
+		background-repeat: no-repeat;
+		background-position: 100% 60%;
+		background-attachment: fixed;
+		background-size: 25%;
+	}
+	.wrapper {
+		position: relative;
+		z-index: 2;
+	}
 	&-box {
 		@include flex($wrap: wrap, $alignI: strech);
 		padding: 45px 0 40px;
