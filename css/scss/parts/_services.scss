@@ -1,6 +1,18 @@
+.services {
+	@media (min-width: 1001px) {
+		background-image: url(../images/services_bg.png);
+		background-repeat: no-repeat;
+		background-position: 0% 80%;
+		background-attachment: fixed;
+	}
+}
+
+
 .services .wrapper{
 	@extend %clearfix;
 	padding: 70px 20px 0 ;
+	position: relative;
+	z-index: 2;
 }
 
 .services__item {
